@@ -14,10 +14,9 @@
   <section class="msger">
     <header class="msger-header">
       <div class="msger-header-title">
-        <i class="fas fa-bug"></i> 赛博小鱼人的聊天室 <i class="fas fa-bug"></i>
+        <i class="fas fa-bug"></i> 海底小纵队的聊天室 <i class="fas fa-bug"></i>
       </div>
     </header>
-
     <main class="msger-chat">
       <div class="msg left-msg">
         <div class="msg-img" style="background-image: url(../static/images/taffy.svg)"></div>
@@ -41,7 +40,6 @@
       <button type="submit" class="msger-send-btn">Send</button>
     </form>
   </section>
-  <!-- partial -->
   <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
   <script>
 
@@ -85,7 +83,7 @@
 
     function botResponse(rawText) {
       $.ajax({
-        url: "/get",  // 后端视图函数的URL路由，与urls.py中配置的路径一致
+        url: "/get",  
         method: "GET",
         data: { msg: rawText },  // 将用户输入的消息作为查询参数发送给后端
         success: function (data) {

@@ -127,10 +127,6 @@
         var $ = layui.jquery,
             layer = layui.layer,
             echarts = layui.echarts;
-
-        /**
-         * 报表功能
-         */
         var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
 
         var optionRecords = {
@@ -190,10 +186,6 @@
         };
         echartsRecords.setOption(optionRecords);
 
-
-        /**
-         * 柱状图
-         */
         var echartsDataset = echarts.init(document.getElementById('echarts-dataset'), 'walden');
 
         var optionDataset = {
@@ -208,8 +200,6 @@
             },
             xAxis: {type: 'category'},
             yAxis: {},
-            // Declare several bar series, each will be mapped
-            // to a column of dataset.source by default.
             series: [
                 {type: 'bar'},
                 {type: 'bar'},

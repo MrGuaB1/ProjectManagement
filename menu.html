@@ -42,8 +42,6 @@
         var $ = layui.jquery;
         var table = layui.table;
         var treetable = layui.treetable;
-
-        // 渲染表格
         layer.load(2);
         treetable.render({
             treeColIndex: 1,
@@ -85,8 +83,6 @@
         $('#btn-fold').click(function () {
             treetable.foldAll('#munu-table');
         });
-
-        //监听工具条
         table.on('tool(munu-table)', function (obj) {
             var data = obj.data;
             var layEvent = obj.event;

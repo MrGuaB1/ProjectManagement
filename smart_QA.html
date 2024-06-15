@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
   <section class="msger">
     <header class="msger-header">
       <div class="msger-header-title">
@@ -50,8 +49,6 @@
     const msgerInput = get(".msger-input");
     const msgerChat = get(".msger-chat");
 
-
-    // Icons made by Freepik from www.flaticon.com
     const BOT_IMG = "../static/images/taffy.svg";
     const PERSON_IMG = "../static/images/you.svg";
     const BOT_NAME = "赛博小中医";
@@ -69,7 +66,6 @@
     });
 
     function appendMessage(name, img, side, text) {
-      //   Simple solution for small apps
       const msgHTML = `
 <div class="msg ${side}-msg">
   <div class="msg-img" style="background-image: url(${img})"></div>
@@ -88,8 +84,6 @@
     }
 
     function botResponse(rawText) {
-      // Bot Response
-      // 构造 AJAX 请求
       $.ajax({
         url: "/get",  // 后端视图函数的URL路由，与urls.py中配置的路径一致
         method: "GET",
@@ -106,9 +100,6 @@
       });
 
     }
-
-
-    // Utils
     function get(selector, root = document) {
       return root.querySelector(selector);
     }
@@ -119,8 +110,6 @@
 
       return `${h.slice(-2)}:${m.slice(-2)}`;
     }
-
-
 
   </script>
 
